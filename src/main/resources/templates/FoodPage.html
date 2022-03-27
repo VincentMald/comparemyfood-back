@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Food</title>
+</head>
+<body>
+	<h1>FoodList</h1>
+	
+<!-- 	<form action = "#" th:action ="@{/food}" th:object="${newFood}" method="POSt"> -->
+<!-- 		<p>FoodName:</p> -->
+<!-- 		<input type="text" th:field="*{name}"> -->
+<!-- 		<p>Image:</p> -->
+<!-- 		<input type="text" th:field="*{image}"> -->
+<!-- 		<input type="submit" value="Save"> -->
+<!-- 	</form> -->
+	
+	<div th:each="food : ${foods}">
+		<p th:text ="${food.name}"></p>	
+	</div>
+	
+</body>
+</html>
